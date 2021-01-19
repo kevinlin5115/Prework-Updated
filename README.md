@@ -31,8 +31,9 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+![](https://i.imgur.com/XRakQry.gif)
 
-![](https://i.imgur.com/Jos0UVQ.gif)
+
 
 
 
@@ -44,9 +45,14 @@ This is an updated version of the original tip calculator, with new features suc
 
 New features were implemented after hours of searching and browsing on developer.apple.com. 
 
-There are still rooms for improvement for this revision, the original idea is to set the slider to have an increment of 1 but didn't work after numerous tries, showing 00% instead. 
+~~There are still rooms for improvement for this revision, the original idea is to set the slider to have an increment of 1 but didn't work after numerous tries, showing 00% instead. ~~
 
 The tap recognizer issue still presents, users are able to call the keyboard after pressing the Bill Amount Input but were having issue to close the keyboard when tapping elsewhere, that's the main reason the Done button was added other than aesthetic purposes. 
+
+Update 1/19/21: 
+* The slider issue was fixed, with an increment of 1% now. 
+* Changed the all background to dark colors in dark mode.
+
 
 ## License
 
