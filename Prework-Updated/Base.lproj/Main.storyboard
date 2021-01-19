@@ -33,10 +33,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                         <connections>
-                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="5hO-ym-p4N"/>
-                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="BOd-rc-lDb"/>
-                                            <action selector="calculateTipSlide:" destination="BYZ-38-t0r" eventType="editingChanged" id="OXe-0S-0Jy"/>
-                                            <action selector="calculateTipSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="mBK-Kp-C5L"/>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="WyI-us-twZ"/>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="bsD-EI-y78"/>
+                                            <action selector="calculateTipSlide:" destination="BYZ-38-t0r" eventType="editingChanged" id="eZh-JI-cgf"/>
+                                            <action selector="calculateTipSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="iIF-GZ-3in"/>
                                         </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nJI-Ah-TLJ">
@@ -49,17 +49,17 @@
                                         </segments>
                                         <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Vh-9w-Lqb"/>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Hc-E1-hKd"/>
                                         </connections>
                                     </segmentedControl>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uOY-cy-uTd">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="uOY-cy-uTd">
                                         <rect key="frame" x="6" y="153" width="360" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <action selector="calculateTipSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="cOF-Ym-kVE"/>
+                                            <action selector="calculateTipSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z2c-ws-MHP"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-DX-kOw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-DX-kOw">
                                         <rect key="frame" x="271" y="108" width="93" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -87,19 +87,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aaY-f4-wF4">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aaY-f4-wF4">
                                         <rect key="frame" x="247" y="324" width="94" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="numberStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="sXi-Yg-PBi"/>
+                                            <action selector="numberStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="QGs-Uj-cQh"/>
                                         </connections>
                                     </stepper>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoj-Q3-7aW">
                                         <rect key="frame" x="207" y="324" width="42" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-nq-das">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zs-nq-das">
                                                 <rect key="frame" x="6" y="6" width="29" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -112,18 +112,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2x-CM-YMf">
-                                <rect key="frame" x="146" y="71" width="131" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <switch opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d7C-Za-Ksh">
                                 <rect key="frame" x="347" y="67" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="darkModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ow4-iD-Qbn"/>
+                                    <action selector="darkModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ahu-61-a3D"/>
                                 </connections>
                             </switch>
                             <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KzD-oa-iYx">
@@ -175,6 +168,18 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akT-iu-73O">
+                                <rect key="frame" x="0.0" y="0.0" width="439" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2x-CM-YMf">
+                                <rect key="frame" x="31" y="74" width="131" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -192,13 +197,14 @@
                         <outlet property="greenBlock" destination="qHB-9j-08w" id="DO6-4l-VaB"/>
                         <outlet property="numberOfPeopleLabel" destination="2Zs-nq-das" id="HwZ-IQ-Z1Y"/>
                         <outlet property="numberOfPeopleStepper" destination="aaY-f4-wF4" id="T6W-e8-ns8"/>
-                        <outlet property="percentageLabelSlide" destination="Ys5-DX-kOw" id="2KH-A7-h5Q"/>
+                        <outlet property="percentageLabelSlide" destination="Ys5-DX-kOw" id="A9t-zN-k2v"/>
                         <outlet property="split" destination="oRC-aW-9tT" id="pGW-pr-Wic"/>
                         <outlet property="tipAmountLabel" destination="j1D-ZX-q3a" id="PsQ-HD-8xS"/>
                         <outlet property="tipCalculatorLabel" destination="O2x-CM-YMf" id="W1Q-kK-BXN"/>
                         <outlet property="tipControl" destination="nJI-Ah-TLJ" id="aS1-cR-qLd"/>
                         <outlet property="tipControlSlide" destination="uOY-cy-uTd" id="AhQ-aZ-f2p"/>
                         <outlet property="totalLabel" destination="D4N-F8-3MJ" id="7jG-4v-bwg"/>
+                        <outlet property="upperBlock" destination="akT-iu-73O" id="4BQ-I0-3eu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberOfPeopleLabel: UILabel!
     @IBOutlet weak var each: UILabel!
     @IBOutlet weak var eachAmountLabel: UILabel!
+    @IBOutlet weak var upperBlock: UIView!
+    
     
     
     
@@ -56,17 +58,33 @@ class ViewController: UIViewController {
     @IBAction func darkModeAction(_ sender: Any) {
         if darkModeSwitch.isOn == true {
             // set background to dark gray
-            view.backgroundColor = UIColor.darkGray
+            view.backgroundColor = UIColor.init(red:0.1, green:0.1,blue:0.1,alpha:1.0)
+            tipControlSlide.tintColor = UIColor.darkGray
+            upperBlock.backgroundColor = UIColor.lightGray
+            greenBlock.backgroundColor = UIColor.lightGray
+            blueBlock.backgroundColor = UIColor.lightGray
+            
             // set title to white for visibility
-            tipCalculatorLabel.textColor = UIColor.white
+            tipCalculatorLabel.textColor = UIColor.lightGray
         }else{
             view.backgroundColor = UIColor.white
+            upperBlock.backgroundColor = UIColor.white
+            greenBlock.backgroundColor = UIColor.systemGreen
+            blueBlock.backgroundColor = UIColor.systemTeal
             tipCalculatorLabel.textColor = UIColor.black
         }
     }
     
     @IBAction func numberStepper(_ sender: Any) {
         numberOfPeopleLabel.text = String(Int(numberOfPeopleStepper.value))
+        
+        let tipPercentages = Double(tipControlSlide.value)
+        let bill = Double(billAmountTextField.text!) ?? 0
+        let numberOfPeople = Double(numberOfPeopleLabel.text!) ?? 0
+        let tip = bill * floor(tipPercentages) / 100
+        let total = bill + tip
+        let each = total / numberOfPeople
+        eachAmountLabel.text = String(format: "$%.2f", each)
     }
     
     
@@ -101,13 +119,13 @@ class ViewController: UIViewController {
 
         // Get total tip by multiplying tip * tip Percentage
         let tipPercentages = Double(tipControlSlide.value)
-        let tip = bill * tipPercentages
+        let tip = bill * floor(tipPercentages) / 100
         let total = bill + tip
         // Get each person's payment by dividing total over number of people
         let each = total / numberOfPeople
    
         // Update Slide Percentages
-        percentageLabelSlide.text = String(format: "%3.2f%%",tipPercentages * 100)
+        percentageLabelSlide.text = String(format: "%02d%%",Int(tipPercentages))
         // Update Tip Amount Label
         tipAmountLabel.text = String(format: "$%.2f", tip)
         // Update Total Amount
